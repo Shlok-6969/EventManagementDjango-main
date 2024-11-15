@@ -1,0 +1,24 @@
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom ">
+  <a
+    href="/"
+    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+  >
+    <span class="fs-4" style="color: black;">Events Management</span>
+  </a>
+
+  <ul class="nav nav-pills">
+    {% if user.is_authenticated %}
+      <li class="nav-item"><a href="/" class="nav-link" style="color: #4a3267;">Events</a></li>
+      <li class="nav-item"><a href="/dash" class="nav-link" style="color: #4a3267;">Dashboard</a></li>
+      <li class="nav-item"><a href="/profile" class="nav-link" style="color: #4a3267;">Profile</a></li>
+      <li class="nav-item"><a href="/logout" class="nav-link" style="color: #4a3267;">Logout</a></li>
+    {% else %}
+      <li class="nav-item">
+        <a href="/" class="nav-link" style="color: #4a3267;">Home</a>
+      </li>
+      <li class="nav-item"><a href="/" class="nav-link" style="color: #4a3267;">Events</a></li>
+      <li class="nav-item"><a href="/login" class="nav-link" style="color: #4a3267;">Login</a></li>
+      <li class="nav-item"><a href="/register" class="nav-link" style="color: #4a3267;">Register</a></li>
+    {% endif %}
+  </ul>
+</header>
